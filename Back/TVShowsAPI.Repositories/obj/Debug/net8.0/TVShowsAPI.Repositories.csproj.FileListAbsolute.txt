@@ -32,3 +32,4 @@ D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Repositories\obj\Debug\net8.0
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Repositories\obj\Debug\net8.0\refint\TVShowsAPI.Repositories.dll
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Repositories\obj\Debug\net8.0\TVShowsAPI.Repositories.pdb
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Repositories\obj\Debug\net8.0\ref\TVShowsAPI.Repositories.dll
+D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Repositories\obj\Debug\net8.0\TVShowsAPI.Repositories.sourcelink.json

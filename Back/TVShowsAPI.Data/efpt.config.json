@@ -17,6 +17,10 @@
       {
          "Name": "[dbo].[TvShows]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
       }
    ],
    "UiHint": null,

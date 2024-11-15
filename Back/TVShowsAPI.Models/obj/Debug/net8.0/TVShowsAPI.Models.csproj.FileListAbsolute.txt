@@ -20,3 +20,4 @@ D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Models\obj\Debug\net8.0\TVSho
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Models\obj\Debug\net8.0\refint\TVShowsAPI.Models.dll
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Models\obj\Debug\net8.0\TVShowsAPI.Models.pdb
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Models\obj\Debug\net8.0\ref\TVShowsAPI.Models.dll
+D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI.Models\obj\Debug\net8.0\TVShowsAPI.Models.sourcelink.json

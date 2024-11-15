@@ -1,7 +1,47 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\usersdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\usersdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\tvshowscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\tvshowscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\repositories\\usercontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\interfaces\\iusercontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\interfaces\\itvshowcontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\repositories\\tvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\repositories\\tvshowcontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84A4DAD8-80BC-4F06-9DD9-FF08CA101C62}|..\\TVShowsAPI.Models\\TVShowsAPI.Models.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC785964-6604-4F20-8A33-6EDED1D158DA}|..\\TVShowsAPI.Data\\TVShowsAPI.Data.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.data\\models\\tvshowdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +49,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersDataController.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersDataController.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersDataController.cs",
+              "RelativeToolTip": "Controllers\\UsersDataController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:22:01.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TvShowsController .cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\TvShowsController .cs",
+              "RelativeDocumentMoniker": "Controllers\\TvShowsController .cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\TvShowsController .cs",
+              "RelativeToolTip": "Controllers\\TvShowsController .cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:17:12.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:16:58.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserContextRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\UserContextRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Repositories\\UserContextRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\UserContextRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Repositories\\UserContextRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:14:04.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserContextRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\IUserContextRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Interfaces\\IUserContextRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\IUserContextRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Interfaces\\IUserContextRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:12:54.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITvShowContextRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\ITvShowContextRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Interfaces\\ITvShowContextRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\ITvShowContextRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Interfaces\\ITvShowContextRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:12:40.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TvShowRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\TvShowRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Repositories\\TvShowRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\TvShowRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Repositories\\TvShowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:09:42.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TvShowContextRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\TvShowContextRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Repositories\\TvShowContextRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\TvShowContextRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Repositories\\TvShowContextRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:09:37.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:09:06.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:08:37.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Models\\User.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Models\\User.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:08:02.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TVShowDataContext.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Data\\Models\\TVShowDataContext.cs",
+              "RelativeDocumentMoniker": "..\\TVShowsAPI.Data\\Models\\TVShowDataContext.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI.Data\\Models\\TVShowDataContext.cs",
+              "RelativeToolTip": "..\\TVShowsAPI.Data\\Models\\TVShowDataContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA5wCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T15:04:43.163Z",
+              "EditorCaption": ""
             }
           ]
         }

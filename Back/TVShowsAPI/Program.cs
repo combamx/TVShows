@@ -1,7 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using TVShowsAPI.Data.Models;
 using TVShowsAPI.Repositories.Interfaces;
 using TVShowsAPI.Repositories.Repositories;
-using TVShowsAPI.Data.Models;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder ( args );
 
@@ -14,7 +14,11 @@ builder.Configuration
 
 // Add services to the container.
 builder.Services.AddScoped<ITvShowRepository , TvShowRepository> ( );
+builder.Services.AddScoped<IUserRepository , UserRepository> ( );
+
 builder.Services.AddScoped<ITvShowContextRepository , TvShowContextRepository> ( );
+builder.Services.AddScoped<IUserContextRepository , UserContextRepository> ( );
+
 
 var cnn = builder.Configuration.GetConnectionString ( "DefaultConnection" );
 // Configura el contexto de la base de datos

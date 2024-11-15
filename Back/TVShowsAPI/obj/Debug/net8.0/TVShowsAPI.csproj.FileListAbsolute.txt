@@ -162,3 +162,4 @@ D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI\obj\Debug\net8.0\refint\TVSho
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI\obj\Debug\net8.0\TVShowsAPI.pdb
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI\obj\Debug\net8.0\TVShowsAPI.genruntimeconfig.cache
 D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI\obj\Debug\net8.0\ref\TVShowsAPI.dll
+D:\Download\Examen\TVShows\TVShows\Back\TVShowsAPI\obj\Debug\net8.0\TVShowsAPI.sourcelink.json
