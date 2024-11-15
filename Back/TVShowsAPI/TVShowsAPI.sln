@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVShowsAPI", "TVShowsAPI.csproj", "{A20F84F5-BA8E-4486-AB75-4B362257F5D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TVShowsAPI", "TVShowsAPI.csproj", "{A20F84F5-BA8E-4486-AB75-4B362257F5D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVShowsAPI.Models", "..\TVShowsAPI.Models\TVShowsAPI.Models.csproj", "{84A4DAD8-80BC-4F06-9DD9-FF08CA101C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TVShowsAPI.Models", "..\TVShowsAPI.Models\TVShowsAPI.Models.csproj", "{84A4DAD8-80BC-4F06-9DD9-FF08CA101C62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVShowsAPI.Repositories", "..\TVShowsAPI.Repositories\TVShowsAPI.Repositories.csproj", "{0ABF0481-5379-4269-A792-DCF968DB33A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TVShowsAPI.Repositories", "..\TVShowsAPI.Repositories\TVShowsAPI.Repositories.csproj", "{0ABF0481-5379-4269-A792-DCF968DB33A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TVShowsAPI.Data", "..\TVShowsAPI.Data\TVShowsAPI.Data.csproj", "{FC785964-6604-4F20-8A33-6EDED1D158DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TVShowsAPI.Data", "..\TVShowsAPI.Data\TVShowsAPI.Data.csproj", "{FC785964-6604-4F20-8A33-6EDED1D158DA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseTVShows", "..\DatabaseTVShows\DatabaseTVShows.sqlproj", "{9AC1E505-0A22-41BC-8DD0-27188286641A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{FC785964-6604-4F20-8A33-6EDED1D158DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC785964-6604-4F20-8A33-6EDED1D158DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC785964-6604-4F20-8A33-6EDED1D158DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC1E505-0A22-41BC-8DD0-27188286641A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
