@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\usersdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\usersdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\tvshowscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\tvshowscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A20F84F5-BA8E-4486-AB75-4B362257F5D0}|TVShowsAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0ABF0481-5379-4269-A792-DCF968DB33A8}|..\\TVShowsAPI.Repositories\\TVShowsAPI.Repositories.csproj|d:\\download\\examen\\tvshows\\tvshows\\back\\tvshowsapi.repositories\\repositories\\usercontextrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -58,19 +58,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Title": "UsersDataController.cs",
+              "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersDataController.cs",
+              "ToolTip": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersDataController.cs",
+              "RelativeToolTip": "Controllers\\UsersDataController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:19:03.111Z",
+              "WhenOpened": "2024-11-15T15:22:01.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TvShowsController .cs",
               "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\TvShowsController .cs",
               "RelativeDocumentMoniker": "Controllers\\TvShowsController .cs",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Download\\Examen\\TVShows\\TVShows\\Back\\TVShowsAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
