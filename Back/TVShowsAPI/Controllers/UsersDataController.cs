@@ -15,14 +15,16 @@ namespace TVShowsAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll ( )
+        [Route ( "GetAllUsers" )]
+        public async Task<IActionResult> GetAllUsers ( )
         {
             var users = await _userRepository.GetAllAsync ( );
             return Ok ( users );
         }
 
-        [HttpGet ( "{id}" )]
-        public async Task<IActionResult> GetById ( int id )
+        [HttpGet]
+        [Route ( "GetByIdUser/{id}" )]
+        public async Task<IActionResult> GetByIdUser ( int id )
         {
             var user = await _userRepository.GetByIdAsync ( id );
             if (user == null) return NotFound ( );
@@ -30,14 +32,16 @@ namespace TVShowsAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add ( Data.Models.User user )
+        [Route ( "AddUser" )]
+        public async Task<IActionResult> AddUser ( [FromForm] Data.Models.User user )
         {
             var createdUser = await _userRepository.AddAsync ( user );
-            return CreatedAtAction ( nameof ( GetById ) , new { id = createdUser.Id } , createdUser );
+            return CreatedAtAction ( nameof ( GetByIdUser ) , new { id = createdUser.Id } , createdUser );
         }
 
-        [HttpPut ( "{id}" )]
-        public async Task<IActionResult> Update ( int id , Data.Models.User user )
+        [HttpPut]
+        [Route ( "UpdateUser" )]
+        public async Task<IActionResult> UpdateUser ( int id , [FromForm] Data.Models.User user )
         {
             if (id != user.Id) return BadRequest ( );
 
@@ -47,13 +51,15 @@ namespace TVShowsAPI.Controllers
             return Ok ( updatedUser );
         }
 
-        [HttpDelete ( "{id}" )]
-        public async Task<IActionResult> Delete ( int id )
+        [HttpDelete]
+        [Route ( "DeleteUser/{id}" )]
+        public async Task<IActionResult> DeleteUser ( int id )
         {
             var result = await _userRepository.DeleteAsync ( id );
             if (!result) return NotFound ( );
 
             return NoContent ( );
         }
+
     }
 }

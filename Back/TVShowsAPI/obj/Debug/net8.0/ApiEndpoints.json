@@ -98,49 +98,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Favorite",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Format",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Episodes",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Duration",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Scenarios",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Classification",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "show",
+        "Type": "TVShowsAPI.Data.Models.TvShow",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -212,49 +172,9 @@
         "IsRequired": true
       },
       {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Favorite",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Format",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Episodes",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Duration",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Scenarios",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Classification",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "show",
+        "Type": "TVShowsAPI.Data.Models.TvShow",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -340,8 +260,8 @@
   },
   {
     "ContainingType": "TVShowsAPI.Controllers.UsersDataController",
-    "Method": "GetAll",
-    "RelativePath": "api/UsersData",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/UsersData/GetAllUsers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -350,62 +270,9 @@
   },
   {
     "ContainingType": "TVShowsAPI.Controllers.UsersDataController",
-    "Method": "Add",
-    "RelativePath": "api/UsersData",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "TVShowsAPI.Data.Models.User",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TVShowsAPI.Controllers.UsersDataController",
-    "Method": "GetById",
-    "RelativePath": "api/UsersData/{id}",
+    "Method": "GetByIdUser",
+    "RelativePath": "api/UsersData/GetByIdUser/{id}",
     "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TVShowsAPI.Controllers.UsersDataController",
-    "Method": "Update",
-    "RelativePath": "api/UsersData/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "user",
-        "Type": "TVShowsAPI.Data.Models.User",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TVShowsAPI.Controllers.UsersDataController",
-    "Method": "Delete",
-    "RelativePath": "api/UsersData/{id}",
-    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

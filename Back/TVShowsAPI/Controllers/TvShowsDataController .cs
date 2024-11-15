@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TVShowsAPI.Models;
 using TVShowsAPI.Repositories.Interfaces;
 
@@ -42,7 +41,7 @@ namespace TVShowsAPI.Controllers
 
         [HttpPost]
         [Route ( "AddContext" )]
-        public async Task<IActionResult> AddContext ( [FromQuery] Data.Models.TvShow show )
+        public async Task<IActionResult> AddContext ( [FromForm] Data.Models.TvShow show )
         {
             var response = await _repository.AddAsync ( show );
             if (response.Status == 500)
@@ -51,10 +50,10 @@ namespace TVShowsAPI.Controllers
             }
             return CreatedAtAction ( nameof ( GetById ) , new { id = show.Id } , response );
         }
-        
+
         [HttpPut]
         [Route ( "UpdateContext/{id}" )]
-        public async Task<IActionResult> UpdateContext ( int id , [FromQuery] Data.Models.TvShow show )
+        public async Task<IActionResult> UpdateContext ( int id , [FromForm] Data.Models.TvShow show )
         {
             if (id != show.Id)
             {
@@ -88,7 +87,7 @@ namespace TVShowsAPI.Controllers
             }
             return Ok ( response );
         }
-        
+
 
     }
 }
