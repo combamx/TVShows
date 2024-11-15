@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TVShowsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c60c998fbebce6530e9a21125703e6477d81aca6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d7251c2906a634fdad73803e37c5c2eadd1060c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TVShowsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TVShowsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
