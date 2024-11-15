@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TVShowsAPI.Models/1.0.0": {
+        "runtime": {
+          "TVShowsAPI.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TVShowsAPI.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

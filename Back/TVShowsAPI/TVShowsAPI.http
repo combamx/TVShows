@@ -1,0 +1,6 @@
+@TVShowsAPI_HostAddress = http://localhost:5132
+
+GET {{TVShowsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,262 @@
+[
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsController",
+    "Method": "GetAll",
+    "RelativePath": "api/TvShows",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "rows",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsController",
+    "Method": "Add",
+    "RelativePath": "api/TvShows",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "show",
+        "Type": "TVShowsAPI.Models.TvShow",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsController",
+    "Method": "GetById",
+    "RelativePath": "api/TvShows/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsController",
+    "Method": "Update",
+    "RelativePath": "api/TvShows/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "show",
+        "Type": "TVShowsAPI.Models.TvShow",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsController",
+    "Method": "Delete",
+    "RelativePath": "api/TvShows/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsDataController",
+    "Method": "AddContext",
+    "RelativePath": "api/TvShowsData/AddContext",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Favorite",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Format",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Episodes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Duration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Scenarios",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Classification",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsDataController",
+    "Method": "DeleteContext",
+    "RelativePath": "api/TvShowsData/DeleteContext/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsDataController",
+    "Method": "GetAll",
+    "RelativePath": "api/TvShowsData/GetAllContext",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "rows",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsDataController",
+    "Method": "GetById",
+    "RelativePath": "api/TvShowsData/GetByIdContext/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TVShowsAPI.Controllers.TvShowsDataController",
+    "Method": "UpdateContext",
+    "RelativePath": "api/TvShowsData/UpdateContext/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Favorite",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Format",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Episodes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Duration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Scenarios",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Classification",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
