@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TVShowsAPI.Data.Models;
+using TVShowsAPI.Helper;
 using TVShowsAPI.Repositories.Interfaces;
 
 namespace TVShowsAPI.Repositories.Repositories
@@ -25,6 +26,7 @@ namespace TVShowsAPI.Repositories.Repositories
 
         public async Task<Data.Models.User> AddAsync ( Data.Models.User user )
         {
+            user.Password = PasswordHasher.HashPassword ( user.Password );
             _context.Users.Add ( user );
             await _context.SaveChangesAsync ( );
             return user;
@@ -37,7 +39,7 @@ namespace TVShowsAPI.Repositories.Repositories
 
             existingUser.Name = user.Name;
             existingUser.Email = user.Email;
-            existingUser.Password = user.Password;
+            existingUser.Password = PasswordHasher.HashPassword ( user.Password );
 
             await _context.SaveChangesAsync ( );
             return existingUser;
@@ -51,6 +53,20 @@ namespace TVShowsAPI.Repositories.Repositories
             _context.Users.Remove ( user );
             await _context.SaveChangesAsync ( );
             return true;
+        }
+
+        public async Task<Data.Models.User> GetByEmailPasswordAsync ( string email , string password )
+        {
+            string hashedPassword = PasswordHasher.HashPassword ( password );
+            bool isMatch = PasswordHasher.VerifyPassword ( password , hashedPassword );
+
+            if (isMatch)
+            {
+                return await _context.Users.Where ( p => p.Email == email && p.Password == hashedPassword ).FirstOrDefaultAsync ( );
+            }
+
+            return null;
+
         }
     }
 }

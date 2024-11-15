@@ -37,6 +37,15 @@ namespace TVShowsAPI.Controllers
             return CreatedAtAction ( nameof ( GetById ) , new { id = createdUser.Id } , createdUser );
         }
 
+        [HttpPost]
+        [Route ( "GetByEmailPassword" )]
+        public async Task<IActionResult> GetByEmailPassword ( string email , string password )
+        {
+            var user = await _userRepository.GetByEmailPasswordAsync ( email , password );
+            if (user == null) return NotFound ( );
+            return Ok ( user );
+        }
+
         [HttpPut ( "{id}" )]
         public async Task<IActionResult> Update ( int id , User user )
         {

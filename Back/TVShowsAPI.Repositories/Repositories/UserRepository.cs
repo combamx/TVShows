@@ -1,4 +1,5 @@
-﻿using TVShowsAPI.Models;
+﻿using TVShowsAPI.Helper;
+using TVShowsAPI.Models;
 using TVShowsAPI.Repositories.Interfaces;
 
 namespace TVShowsAPI.Repositories.Repositories
@@ -58,6 +59,19 @@ namespace TVShowsAPI.Repositories.Repositories
 
             _users.Remove ( user );
             return Task.FromResult ( true );
+        }
+
+        public Task<User> GetByEmailPasswordAsync ( string email , string password )
+        {
+            string hashedPassword = PasswordHasher.HashPassword ( password );
+            bool isMatch = PasswordHasher.VerifyPassword ( password , hashedPassword );
+
+            if (isMatch)
+            {
+                return Task.FromResult ( _users.FirstOrDefault ( u => u.Email.Equals ( email , StringComparison.OrdinalIgnoreCase ) && u.Password == hashedPassword ) );
+            }
+
+            return null;
         }
     }
 }

@@ -39,6 +39,15 @@ namespace TVShowsAPI.Controllers
             return CreatedAtAction ( nameof ( GetByIdUser ) , new { id = createdUser.Id } , createdUser );
         }
 
+        [HttpPost]
+        [Route ( "GetUserByEmailPassword" )]
+        public async Task<IActionResult> GetUserByEmailPassword ( string email , string password )
+        {
+            var user = await _userRepository.GetByEmailPasswordAsync ( email , password );
+            if (user == null) return NotFound ( );
+            return Ok ( user );
+        }
+
         [HttpPut]
         [Route ( "UpdateUser" )]
         public async Task<IActionResult> UpdateUser ( int id , [FromForm] Data.Models.User user )
@@ -60,6 +69,8 @@ namespace TVShowsAPI.Controllers
 
             return NoContent ( );
         }
+
+
 
     }
 }

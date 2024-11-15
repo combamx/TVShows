@@ -1,6 +1,4 @@
-﻿USE [TVShowData]
-GO
-DELETE FROM [dbo].[Users]
+﻿DELETE FROM [dbo].[Users]
 GO
 DELETE FROM [dbo].[TvShows]
 GO
