@@ -414,7 +414,7 @@ FodyWeavers.xsd
 
 /obj
 /bin
-/.vs
+.vs
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
