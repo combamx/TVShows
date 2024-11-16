@@ -63,4 +63,8 @@
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\TvShows.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.TvShow.sql" />
+    <None Include="Script.PostDeployment.User.sql" />
+  </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@
     [Duration]       NVARCHAR (50)  NOT NULL,
     [Scenarios]      NVARCHAR (255) NOT NULL,
     [Classification] NVARCHAR (50)  NOT NULL,
+    [Image]          VARCHAR (800)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

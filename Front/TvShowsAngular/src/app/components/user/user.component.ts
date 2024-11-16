@@ -9,25 +9,28 @@ import { ApiResponse } from 'src/app/models/api-response';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  users: ApiResponse<User[]> = { data: [], page: 0, rows: 0, counts: 0, status: 0, errorMessage: '' };          // Array para almacenar los usuarios
-  errorMessage: string = '';   // Variable para almacenar mensajes de error
+
+  isLoading: boolean = true;
+  users: User[] = [];         // Array para almacenar los usuarios
+  errorMessage: string = '';  // Variable para almacenar mensajes de error
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
     // Llamar al servicio para obtener los usuarios
     this.usersService.getAllUsers().subscribe({
-      next: (response) => {
+      next: (response: ApiResponse<User[]>) => {
+        this.isLoading = false;
         if (response.status === 200) {
-          this.users = response;
+          this.users = response.data;
         } else {
           this.errorMessage = response.errorMessage || 'Error fetching users';
         }
       },
       error: (error) => {
+        this.isLoading = false;
         this.errorMessage = 'Error fetching users: ' + error.message;
       }
     });
   }
-
 }

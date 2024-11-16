@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TVShowsAPI.Models;
 using TVShowsAPI.Repositories.Interfaces;
 
 namespace TVShowsAPI.Controllers
 {
     [Route ( "api/[controller]" )]
     [ApiController]
+    [Produces ( "application/json" )]
     public class TvShowsDataController : ControllerBase
     {
         private readonly ITvShowContextRepository _repository;
@@ -52,22 +52,9 @@ namespace TVShowsAPI.Controllers
         }
 
         [HttpPut]
-        [Route ( "UpdateContext/{id}" )]
-        public async Task<IActionResult> UpdateContext ( int id , [FromForm] Data.Models.TvShow show )
+        [Route ( "UpdateContext" )]
+        public async Task<IActionResult> UpdateContext ( [FromForm] Data.Models.TvShow show )
         {
-            if (id != show.Id)
-            {
-                return BadRequest ( new ApiResponse<TvShow>
-                {
-                    Data = null ,
-                    Page = 1 ,
-                    Rows = 1 ,
-                    Counts = 0 ,
-                    Status = 500 ,
-                    ErrorMessage = "Id mismatch"
-                } );
-            }
-
             var response = await _repository.UpdateAsync ( show );
             if (response.Status == 500)
             {

@@ -1,40 +1,51 @@
-<p>home works!</p>
+<div class="row">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let show of tvShows; let i = index">
+      <div class="card" style="min-height: 500px">
+        <img
+          src="{{ show.image }}"
+          class="card-img-top"
+          style="height: 250px"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ show.name }}
+            <ng-container *ngIf="show.favorite; else notFavorite">
+              <i class="bi bi-star-fill"></i>
+            </ng-container>
+            <ng-template #notFavorite>
+              <i class="bi bi-star"></i>
+            </ng-template>
+          </h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ show.content }}</li>
+            <li class="list-group-item">{{ show.format }}</li>
+            <li class="list-group-item">{{ show.classification }}</li>
+            <li class="list-group-item">
+              {{ show.scenarios }}<br />{{ show.episodes }}
+            </li>
+            <li class="list-group-item">{{ show.duration }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="https://hipermediaciones.com/wp-content/uploads/2013/10/bbs5-1600x1200-pre-e.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
+  <!-- Indicador de carga -->
+  <div *ngIf="isLoading" class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
+
+  <!-- Mensaje cuando no hay programas de TV -->
+  <div *ngIf="!isLoading && tvShows.length === 0">
+    <p>No TV shows available.</p>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="errorMessage">
+    <p style="color: red">{{ errorMessage }}</p>
   </div>
 </div>

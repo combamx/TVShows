@@ -43,6 +43,6 @@ public partial class TvShow
     [StringLength ( 50 )]
     public string Classification { get; set; }
 
-    [StringLength ( 500 )]
+    [StringLength ( 800 )]
     public string Image { get; set; }
 }

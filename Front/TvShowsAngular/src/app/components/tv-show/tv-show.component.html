@@ -1,6 +1,20 @@
-<div class="row">
+<!-- Sección de creación de nuevo programa -->
+<div class="row" *ngIf="!isNew">
   <div class="col-12">
-    <table class="table table-striped table-hover">
+    <button type="button" class="btn btn-outline-primary" (click)="isNew = true">
+      <i class="bi bi-plus-circle"></i> Nuevo Registro
+    </button>
+  </div>
+</div>
+
+<!-- Sección de lista de programas -->
+<div class="row" *ngIf="!isNew">
+  <div class="col-12">
+    <!-- Tabla de programas de televisión -->
+    <table
+      class="table table-striped table-hover"
+      *ngIf="tvShows.length > 0 && !isLoading"
+    >
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -8,16 +22,25 @@
           <th scope="col">Content</th>
           <th scope="col">Format</th>
           <th scope="col">Classification</th>
+          <th scope="col">Favorito</th>
           <th scope="col" style="width: 10%">Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let show of tvShows.data; let i = index">
+        <tr *ngFor="let show of tvShows; let i = index">
           <th scope="row">{{ i + 1 }}</th>
           <td>{{ show.name }}</td>
           <td>{{ show.content }}</td>
           <td>{{ show.format }}</td>
           <td>{{ show.classification }}</td>
+          <td>
+            <ng-container *ngIf="show.favorite; else notFavorite">
+              <i class="bi bi-star-fill"></i>
+            </ng-container>
+            <ng-template #notFavorite>
+              <i class="bi bi-star"></i>
+            </ng-template>
+          </td>
           <td>
             <div class="btn-group" role="group" aria-label="Basic example">
               <button
@@ -27,10 +50,10 @@
               >
                 <i class="bi bi-pencil-fill"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary">
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#DetalleTvShow">
                 <i class="bi bi-menu-up"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary">
+              <button type="button" class="btn btn-outline-secondary" (click)="deleteTvShow(show.id)">
                 <i class="bi bi-trash"></i>
               </button>
             </div>
@@ -39,12 +62,155 @@
       </tbody>
     </table>
 
-    <div *ngIf="tvShows.data.length === 0">
+    <!-- Indicador de carga -->
+    <div *ngIf="isLoading" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Mensaje cuando no hay programas de TV -->
+    <div *ngIf="!isLoading && tvShows.length === 0">
       <p>No TV shows available.</p>
     </div>
 
+    <!-- Mensaje de error -->
     <div *ngIf="errorMessage">
       <p style="color: red">{{ errorMessage }}</p>
     </div>
   </div>
 </div>
+
+<!-- Sección de formulario de creación -->
+<div class="row" *ngIf="isNew">
+  <div class="col-8">
+    <form (ngSubmit)="submitTvShow()" #tvShowForm="ngForm">
+      <div class="mb-3">
+        <label for="Name" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          aria-describedby="NameHelp"
+          [(ngModel)]="tvShow.name"
+          name="name"
+          required
+        />
+        <div id="NameHelp" class="form-text">Nombre del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Content" class="form-label">Contenido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Content"
+          aria-describedby="ContentHelp"
+          [(ngModel)]="tvShow.content"
+          name="content"
+          required
+        />
+        <div id="ContentHelp" class="form-text">Descripción del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Format" class="form-label">Formato</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Format"
+          aria-describedby="FormatHelp"
+          [(ngModel)]="tvShow.format"
+          name="format"
+          required
+        />
+        <div id="FormatHelp" class="form-text">Formato del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Episodes" class="form-label">Episodios</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Episodes"
+          aria-describedby="EpisodesHelp"
+          [(ngModel)]="tvShow.episodes"
+          name="episodes"
+        />
+        <div id="EpisodesHelp" class="form-text">Episodios del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Duration" class="form-label">Duración</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Duration"
+          aria-describedby="DurationHelp"
+          [(ngModel)]="tvShow.duration"
+          name="duration"
+        />
+        <div id="DurationHelp" class="form-text">Duración del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Scenarios" class="form-label">Escenarios</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Scenarios"
+          aria-describedby="ScenariosHelp"
+          [(ngModel)]="tvShow.scenarios"
+          name="scenarios"
+        />
+        <div id="ScenariosHelp" class="form-text">Escenarios del programa</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Classification" class="form-label">Clasificación</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Classification"
+          aria-describedby="ClassificationHelp"
+          [(ngModel)]="tvShow.classification"
+          name="classification"
+        />
+        <div id="ClassificationHelp" class="form-text">
+          Clasificación del programa
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Image" class="form-label">Imagen</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Image"
+          aria-describedby="ImageHelp"
+          [(ngModel)]="tvShow.image"
+          name="image"
+        />
+        <div id="ImageHelp" class="form-text">Imagen del programa</div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="FavoriteCheck"
+          [(ngModel)]="tvShow.favorite"
+          name="favorite"
+        />
+        <label class="form-check-label" for="FavoriteCheck">Favorito</label>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="submit" class="btn btn-outline-success">Guardar Cambios</button>
+        <button type="button" class="btn btn-outline-danger" (click)="isNew = false">Cancelar Cambios</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

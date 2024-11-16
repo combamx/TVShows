@@ -8,4 +8,5 @@ export interface TVShowData {
   duration: string;
   scenarios: string;
   classification: string;
+  image: string;
 }

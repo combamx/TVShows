@@ -1,11 +1,112 @@
-<p>tv-show-detail works!</p>
 <div class="row">
-  <div class="col">
-    {{ idTvShow }}
-  </div>
-  <div class="col">
-    <button type="button" class="btn btn-dark" [routerLink]="['/tv-show']">
-      Atras
-    </button>
+  <div class="col-8">
+    <form (ngSubmit)="updateTvShow()" #updateForm="ngForm">
+      <div class="mb-3">
+        <label for="Name" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          [(ngModel)]="tvShow.name"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Content" class="form-label">Contenido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Content"
+          [(ngModel)]="tvShow.content"
+          name="content"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Format" class="form-label">Formato</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Format"
+          [(ngModel)]="tvShow.format"
+          name="format"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Episodes" class="form-label">Episodios</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Episodes"
+          [(ngModel)]="tvShow.episodes"
+          name="episodes"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Duration" class="form-label">Duración</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Duration"
+          [(ngModel)]="tvShow.duration"
+          name="duration"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Scenarios" class="form-label">Escenarios</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Scenarios"
+          [(ngModel)]="tvShow.scenarios"
+          name="scenarios"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Classification" class="form-label">Clasificación</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Classification"
+          [(ngModel)]="tvShow.classification"
+          name="classification"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Image" class="form-label">Imagen</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Image"
+          [(ngModel)]="tvShow.image"
+          name="image"
+        />
+      </div>
+
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="FavoriteCheck"
+          [(ngModel)]="tvShow.favorite"
+          name="favorite"
+        />
+        <label class="form-check-label" for="FavoriteCheck">Favorito</label>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="submit" class="btn btn-outline-success">Guardar Cambios</button>
+        <button type="button" class="btn btn-outline-danger" routerLink="/tv-show">Cancelar Cambios</button>
+      </div>
+    </form>
   </div>
 </div>

@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TVShowsAPI.Data.Models;
 using TVShowsAPI.Models;
 using TVShowsAPI.Repositories.Interfaces;
@@ -152,6 +147,7 @@ namespace TVShowsAPI.Repositories.Repositories
                 existingShow.Duration = show.Duration;
                 existingShow.Scenarios = show.Scenarios;
                 existingShow.Classification = show.Classification;
+                existingShow.Image = show.Image;
 
                 _context.TvShows.Update ( existingShow );
                 await _context.SaveChangesAsync ( );
