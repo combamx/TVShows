@@ -7,17 +7,13 @@ namespace TVShowsAPI.Repositories.Repositories
     public class UserRepository : IUserRepository
     {
         // Lista en memoria para almacenar usuarios
-        private readonly List<User> _users;
+        private static List<User> _users;
         private int _nextId = 1; // Contador para los Ids de los usuarios
 
         public UserRepository ( )
         {
             // Inicializando la lista con algunos datos de ejemplo
-            _users = new List<User>
-            {
-                new User { Id = _nextId++, Name = "John Doe", Email = "john.doe@example.com", Password = "hashed_password_123" },
-                new User { Id = _nextId++, Name = "Jane Smith", Email = "jane.smith@example.com", Password = "hashed_password_456" }
-            };
+            LoadData ( );
         }
 
         public Task<IEnumerable<User>> GetAllAsync ( )
@@ -72,6 +68,17 @@ namespace TVShowsAPI.Repositories.Repositories
             }
 
             return null;
+        }
+
+        private void LoadData ( )
+        {
+            if (_users == null)
+            {
+                _users = new List<User>
+                {
+                    new User { Id = _nextId++, Name = "Omar Cortes", Email = "omar.cortes@example.com", Password = "hashed_password_123" },
+                };
+            }
         }
     }
 }
