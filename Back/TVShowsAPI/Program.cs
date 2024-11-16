@@ -24,6 +24,17 @@ var cnn = builder.Configuration.GetConnectionString ( "DefaultConnection" );
 // Configura el contexto de la base de datos
 builder.Services.AddDbContext<TVShowDataContext> ( options => options.UseSqlServer ( cnn ) );
 
+
+// Configurar CORS para permitir solicitudes de cualquier origen
+builder.Services.AddCors ( options =>
+{
+    options.AddPolicy ( "AllowAllOrigins" ,
+        builder => builder.AllowAnyOrigin ( )
+                          .AllowAnyMethod ( )
+                          .AllowAnyHeader ( ) );
+} );
+
+
 // Add services to the container.
 builder.Services.AddControllers ( );
 
@@ -32,6 +43,10 @@ builder.Services.AddEndpointsApiExplorer ( );
 builder.Services.AddSwaggerGen ( );
 
 var app = builder.Build ( );
+
+
+// Usar la política de CORS configurada
+app.UseCors ( "AllowAllOrigins" );
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment ( ))

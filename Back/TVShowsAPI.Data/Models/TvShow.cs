@@ -14,32 +14,35 @@ public partial class TvShow
     public int Id { get; set; }
 
     [Required]
-    [StringLength(255)]
+    [StringLength ( 255 )]
     public string Name { get; set; }
 
     public bool Favorite { get; set; }
 
     [Required]
-    [StringLength(255)]
+    [StringLength ( 255 )]
     public string Content { get; set; }
 
     [Required]
-    [StringLength(255)]
+    [StringLength ( 255 )]
     public string Format { get; set; }
 
     [Required]
-    [StringLength(255)]
+    [StringLength ( 255 )]
     public string Episodes { get; set; }
 
     [Required]
-    [StringLength(50)]
+    [StringLength ( 50 )]
     public string Duration { get; set; }
 
     [Required]
-    [StringLength(255)]
+    [StringLength ( 255 )]
     public string Scenarios { get; set; }
 
     [Required]
-    [StringLength(50)]
+    [StringLength ( 50 )]
     public string Classification { get; set; }
+
+    [StringLength ( 500 )]
+    public string Image { get; set; }
 }

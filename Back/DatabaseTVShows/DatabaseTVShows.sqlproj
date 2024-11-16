@@ -62,6 +62,5 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\TvShows.sql" />
-    <Build Include="Carga.sql" />
   </ItemGroup>
 </Project>

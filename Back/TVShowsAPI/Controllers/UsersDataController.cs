@@ -36,7 +36,7 @@ namespace TVShowsAPI.Controllers
         public async Task<IActionResult> AddUser ( [FromForm] Data.Models.User user )
         {
             var createdUser = await _userRepository.AddAsync ( user );
-            return CreatedAtAction ( nameof ( GetByIdUser ) , new { id = createdUser.Id } , createdUser );
+            return CreatedAtAction ( nameof ( GetByIdUser ) , new { id = createdUser.Data.Id } , createdUser );
         }
 
         [HttpPost]
@@ -65,7 +65,7 @@ namespace TVShowsAPI.Controllers
         public async Task<IActionResult> DeleteUser ( int id )
         {
             var result = await _userRepository.DeleteAsync ( id );
-            if (!result) return NotFound ( );
+            if (result.Status == 500) return NotFound ( );
 
             return NoContent ( );
         }
