@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using TVShowsAPI.Repositories.Interfaces;
 
 namespace TVShowsAPI.Controllers
@@ -17,6 +18,9 @@ namespace TVShowsAPI.Controllers
 
         [HttpGet]
         [Route ( "GetAllContext" )]
+        [Description ( "Get all tv shows description" )]
+        [EndpointDescription ( "Get all tv shows description" )]
+        [Produces ( "application/json" )]
         public async Task<IActionResult> GetAll ( int page = 1 , int rows = 10 )
         {
             var response = await _repository.GetAllAsync ( page , rows );
