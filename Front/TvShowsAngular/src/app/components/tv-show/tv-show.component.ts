@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TvShowsService } from '../../services/tv-shows.service';
 import { TVShowData } from '../../models/tvshow-data';
 import { ApiResponse } from '../../models/api-response';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tv-show',
@@ -16,7 +18,8 @@ export class TvShowComponent implements OnInit {
   tvShow: TVShowData = { id: 0, name: '', favorite: false, content: '', format: '', episodes: '', duration: '', scenarios: '', classification: '', image: '' };
   errorMessage: string = ''; // Variable para almacenar mensajes de error
 
-  constructor(private tvShowsService: TvShowsService) { }
+  constructor(private tvShowsService: TvShowsService, private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.loadTvShows();

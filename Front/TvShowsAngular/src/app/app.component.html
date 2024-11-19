@@ -23,7 +23,8 @@
             </ul>
 
             <span class="navbar-text">
-              <a class="nav-link" [routerLink]="['/login']"><i class="bi bi-person-circle"></i> Login</a>
+              <a class="nav-link" [routerLink]="['/login']"  *ngIf="!isLogin"><i class="bi bi-person-circle"></i> Login</a>
+              <button type="button" class="btn btn-dark" (click)="logout()" *ngIf="isLogin"><i class="bi bi-door-closed"></i> Logout</button>
             </span>
 
           </div>

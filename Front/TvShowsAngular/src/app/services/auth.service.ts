@@ -1,3 +1,4 @@
+import { animate } from '@angular/animations';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,6 +15,7 @@ export class AuthService {
     // Aquí llamas a tu API para verificar las credenciales del usuario
     // Esto es solo un ejemplo básico
     if (email === 'user@example.com' && password === 'password123') {
+      console.log('Inicio de sesión exitoso');
       this.isAuthenticated = true;
       localStorage.setItem('isAuthenticated', 'true'); // Guarda el estado en localStorage
       return true;
@@ -25,7 +27,13 @@ export class AuthService {
 
   // Método para verificar si el usuario está autenticado
   isLoggedIn(): boolean {
-    return this.isAuthenticated || localStorage.getItem('isAuthenticated') === 'true';
+    console.log(localStorage.getItem('isAuthenticated'));
+    if (localStorage.getItem('isAuthenticated') !== 'true') {
+      this.router.navigate(['/login']);
+
+      return false;
+    }
+    return true;
   }
 
   // Método para manejar el cierre de sesión

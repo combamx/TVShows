@@ -16,7 +16,7 @@ export class LoginComponent {
 
   login(): void {
     if (this.authService.login(this.email, this.password)) {
-      this.router.navigate(['/home']); // Redirige al usuario a la página de inicio si el inicio de sesión es exitoso
+      this.router.navigate(['']); // Redirige al usuario a la página de inicio si el inicio de sesión es exitoso
     } else {
       this.errorMessage = 'Credenciales incorrectas. Inténtalo de nuevo.';
     }
