@@ -1,3 +1,4 @@
+<h1>Programas de televisión</h1>
 <!-- Sección de creación de nuevo programa -->
 <div class="row" *ngIf="!isNew">
   <div class="col-12">
@@ -53,7 +54,7 @@
               <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#DetalleTvShow">
                 <i class="bi bi-menu-up"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary" (click)="deleteTvShow(show.id)">
+              <button type="button" class="btn btn-outline-secondary" (click)="deleteTvShow(show.id ?? 0)">
                 <i class="bi bi-trash"></i>
               </button>
             </div>

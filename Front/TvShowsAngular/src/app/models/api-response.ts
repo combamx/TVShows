@@ -4,5 +4,5 @@ export interface ApiResponse<T> {
   rows: number;         // Número de filas devueltas por página
   counts: number;       // Total de registros
   status: number;       // Código de estado HTTP de la respuesta
-  errorMessage: string; // Mensaje de error si ocurre alguno
+  errorMessage?: string; // Mensaje de error si ocurre alguno
 }

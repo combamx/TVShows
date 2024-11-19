@@ -1,12 +1,16 @@
-<div class="row">
+<div class="row" *ngIf="!isNew">
   <div class="col-12">
-    <button type="button" class="btn btn-primary" [routerLink]="['/tv-show-create']">
-      <i class="bi bi-plus-circle"></i> Nuevo
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="createNewUser()"
+    >
+      <i class="bi bi-plus-circle"></i> Nuevo Registro
     </button>
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="!isNew">
   <div class="col-12">
     <table class="table table-striped table-hover">
       <thead>
@@ -23,15 +27,21 @@
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group">
+              <!-- Botón de Editar -->
               <button
                 type="button"
                 class="btn btn-outline-secondary"
-                [routerLink]="['/user-detail', user.id]"
+                (click)="editUser(user)"
               >
                 <i class="bi bi-pencil-fill"></i>
               </button>
-              <button type="button" class="btn btn-outline-secondary">
+              <!-- Botón de Eliminar -->
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                (click)="deleteUser(user.id ?? 0)"
+              >
                 <i class="bi bi-trash"></i>
               </button>
             </div>
@@ -53,6 +63,72 @@
 
     <div *ngIf="errorMessage">
       <p style="color: red">{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Formulario para Alta y Edición -->
+<div class="row" *ngIf="isNew">
+  <div class="col-12">
+    <div class="container mt-4">
+      <h2>{{ isEditing ? 'Editar Usuario' : 'Alta de Usuario' }}</h2>
+      <form (ngSubmit)="saveUser()" #userForm="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="user.name"
+            (input)="convertToUppercase()"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            [(ngModel)]="user.email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="mb-3" *ngIf="!isEditing">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="user.password"
+            name="password"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="userForm.invalid"
+        >
+          Guardar Cambios
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="cancel()"
+        >
+          Cancelar Cambios
+        </button>
+      </form>
+
+      <div *ngIf="errorMessage" class="alert alert-info mt-3">
+        {{ errorMessage }}
+      </div>
     </div>
   </div>
 </div>

@@ -52,8 +52,10 @@ namespace TVShowsAPI.Controllers
         [Route ( "UpdateUser" )]
         public async Task<IActionResult> UpdateUser ( int id , [FromForm] Data.Models.User user )
         {
-            if (id != user.Id) return BadRequest ( );
+            user.Id = id;
 
+            var userOld = await _userRepository.GetByIdAsync ( id );
+            user.Password = userOld.Data.Password;
             var updatedUser = await _userRepository.UpdateAsync ( user );
             if (updatedUser == null) return NotFound ( );
 

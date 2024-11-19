@@ -1,5 +1,5 @@
 export interface TVShowData {
-  id: number;
+  id?: number;
   name: string;
   favorite: boolean;
   content: string;
