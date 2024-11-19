@@ -5,27 +5,32 @@ import { TvShowComponent } from './components/tv-show/tv-show.component';
 import { UserComponent } from './components/user/user.component';
 import { TvShowDetailComponent } from './components/tv-show-detail/tv-show-detail.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     title: 'Home',
+    canActivate: [AuthGuard]
   },
   {
     path: 'tv-show',
     component: TvShowComponent,
     title: 'TV Show',
+    canActivate: [AuthGuard]
   },
   {
     path: 'user',
     component: UserComponent,
     title: 'Usuarios',
+
   },
   {
     path: 'tv-show-detail/:id',
     component: TvShowDetailComponent,
     title: 'Detalle TV Show',
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -35,7 +40,7 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
 ];
